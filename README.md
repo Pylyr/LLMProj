@@ -40,11 +40,9 @@ Uses external data sources to supplement missing values.
 
 **Launch instructions**
 
-`git clone https://github.com/shirley-wu/text_to_table.git`
+`git clone https://github.com/shirley-wu/text_to_table.git
 
-
-# 2️⃣ Change directory to the project root
-cd /content/
+cd /content/`
 
 # 3️⃣ Download necessary data (replace ID if needed)
 gdown "https://drive.google.com/uc?id=1zTfDFCl1nf_giX7IniY5WbXi9tAuEHDn"
