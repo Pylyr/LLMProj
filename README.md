@@ -40,8 +40,8 @@ Uses external data sources to supplement missing values.
 
 **Launch instructions**
 
-# 1️⃣ Clone the repository
-git clone https://github.com/shirley-wu/text_to_table.git
+`git clone https://github.com/shirley-wu/text_to_table.git`
+
 
 # 2️⃣ Change directory to the project root
 cd /content/
