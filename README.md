@@ -25,9 +25,9 @@ Include irrelevant attributes that do not align well with the text.
 -  Contrastive Filtering → Removes redundant or near-duplicate sentences.
 -  GNN-based Attribute Selection → Enhances table accuracy by identifying which attributes should be included in the final structured representation.
 
-Example:
+###  Example:
 
-###  Input Table (Before Filtering)
+Input Table (Before Filtering)
 ```yaml
 "table":  
   - "title": "1978 federation cup (tennis)"  
