@@ -13,15 +13,17 @@ Some necessary information about teams and players is missing in the text but ca
 -  Wikipedia API Lookup → Fills in missing background knowledge.  
 
 
-2️. Improving WikiTableText with Sentence Ranking and Contrastive Filtering 
+2️. Improving WikiTableText with Sentence Ranking, Contrastive Filtering, and GNN-based Attribute Selection.
 
 *Problem*:  
 WikiTableText contains many sentences that do not contribute to table generation.  
 Duplicate or similar sentences increase noise in the dataset. 
+Include irrelevant attributes that do not align well with the text.
 
 *Solution*:  
 -   Ranking Sentences by Importance → Prioritizes relevant sentences.  
--  Contrastive Filtering → Removes redundant or near-duplicate sentences.  
+-  Contrastive Filtering → Removes redundant or near-duplicate sentences.
+-  GNN-based Attribute Selection → Enhances table accuracy by identifying which attributes should be included in the final structured representation.
 
 
 3️. Adding New Datasets & Expanding Domain Coverage  
