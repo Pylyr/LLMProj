@@ -33,4 +33,9 @@ Produces text summaries of hospital admissions and structured patient statistics
 -  Kaggle Financial Reports  
 Converts company financial statements into structured tables.  
 Extracts key metrics: revenue, expenses, net income, cash flow.  
-Uses external data sources to supplement missing values.  
+Uses external data sources to supplement missing values.
+
+---
+
+
+Launch instructions
