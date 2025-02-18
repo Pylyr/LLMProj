@@ -27,14 +27,16 @@ Include irrelevant attributes that do not align well with the text.
 
 Example:
 
-Input Table (Before Filtering)
+###  Input Table (Before Filtering)
+```yaml
+"table":  
+  - "title": "1978 federation cup (tennis)"  
+  - "subtitle": "qualifying round"  
+  - "date": "19 august"  
+  - "winning team": "philippines"  
+  - "score": "3–0"  
+  - "losing team": "thailand"
 
-[['title', '1978 federation cup (tennis)'], 
- ['subtitle', 'qualifying round'], 
- ['date', '19 august'], 
- ['winning team', 'philippines'], 
- ['score', '3–0'], 
- ['losing team', 'thailand']] 
 
 Text:
  "Philippines won Thailand with 3–0 during 1978 Federation Cup."
