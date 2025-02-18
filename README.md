@@ -36,15 +36,18 @@ Example:
   - "winning team": "philippines"  
   - "score": "3–0"  
   - "losing team": "thailand"
-
+```
 
 Text:
  "Philippines won Thailand with 3–0 during 1978 Federation Cup."
-
+ 
+```yaml
 [('subtitle', 'qualifying round'), 
  ('winning team', 'philippines'), 
  ('score', '3–0'), 
- ('losing team', 'thailand')]  
+ ('losing team', 'thailand')]
+```
+
 What Changed?  
 * Removed "title" and "date" since they were not explicitly mentioned in the text.
 * Kept "winning team", "score", and "losing team" because they were directly referenced.
