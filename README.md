@@ -25,6 +25,28 @@ Include irrelevant attributes that do not align well with the text.
 -  Contrastive Filtering → Removes redundant or near-duplicate sentences.
 -  GNN-based Attribute Selection → Enhances table accuracy by identifying which attributes should be included in the final structured representation.
 
+Example:
+
+Input Table (Before Filtering)
+
+[['title', '1978 federation cup (tennis)'], 
+ ['subtitle', 'qualifying round'], 
+ ['date', '19 august'], 
+ ['winning team', 'philippines'], 
+ ['score', '3–0'], 
+ ['losing team', 'thailand']] 
+
+Text:
+ "Philippines won Thailand with 3–0 during 1978 Federation Cup."
+
+[('subtitle', 'qualifying round'), 
+ ('winning team', 'philippines'), 
+ ('score', '3–0'), 
+ ('losing team', 'thailand')]  
+What Changed?  
+* Removed "title" and "date" since they were not explicitly mentioned in the text.
+* Kept "winning team", "score", and "losing team" because they were directly referenced.
+* Maintained "subtitle" for structural context.
 
 3️. Adding New Datasets & Expanding Domain Coverage  
 
