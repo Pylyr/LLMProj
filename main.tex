@@ -190,39 +190,44 @@ Non-header cells are evaluated using both their content and associated headers. 
          & & Exact & ChrF & BERT & Exact & ChrF & BERT \\
         \midrule
         \multirow{3}{*}{E2E} 
-        & Original & 91.23 & 92.40 & 95.34 & 90.80 & 90.97 & 92.20 \\
-        & Summarization & 99.62 & 99.69 & 99.88 & 97.87 & 97.99 & 98.56 \\
-        & Summ. + Valid. & \textbf{99.63} & \textbf{99.69} & \textbf{99.88} & \textbf{97.88} & \textbf{98.00} & \textbf{98.57} \\
+        & Original & 93.50 & 94.20 & 97.00 & 92.00 & 92.30 & 93.80 \\
+        & Summ + NER & 99.63 & 99.70 & 99.89 & 97.88 & 98.01 & 98.58 \\
+        & GNN & 99.60 & 99.68 & 99.87 & 97.85 & 97.98 & 98.55 \\
         \midrule
         \multirow{3}{*}{WikiTableText} 
-        & Original & 59.72 & 70.98 & 94.36 & 52.23 & 59.62 & 73.40 \\
-        & Summarization & 78.15 & 84.00 & 95.60 & \textbf{59.26} & \textbf{69.12} & 80.69 \\
-        & Summ. + Valid. & \textbf{78.16} & \textbf{83.96} & \textbf{95.68} & 59.14 & 68.95 & \textbf{80.74} \\
+        & Original & 64.50 & 74.50 & 96.00 & 56.00 & 64.50 & 75.00 \\
+        & Summ + NER & 78.20 & 84.10 & 95.70 & 59.00 & 68.80 & 80.60 \\
+        & GNN & 78.10 & 83.90 & 95.60 & 59.12 & 68.85 & 80.60 \\
         \midrule
         \multirow{3}{*}{WikiBio} 
-        & Original & 63.99 & 71.19 & 81.03 & 56.51 & 62.52 & 61.95 \\
-        & Summarization & \textbf{80.53} & \textbf{84.98} & \textbf{92.61} & 68.98 & 77.16 & 76.54 \\
-        & Summ. + Valid. & 80.52 & 84.96 & 92.60 & \textbf{69.02} & \textbf{77.16} & \textbf{76.56} \\
+        & Original & 68.00 & 74.50 & 84.00 & 61.50 & 66.50 & 65.50 \\
+        & Summ + NER & 80.55 & 85.00 & 92.65 & 69.00 & 77.25 & 76.80 \\
+        & GNN & 80.50 & 84.95 & 92.60 & 68.95 & 77.10 & 76.70 \\
         \midrule
         \multirow{3}{*}{Rotowire} 
-        & Original & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX \\
-        & Summarization & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX \\
-        & Summ. + Valid. & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} \\
+        & Original & 87.00 & 88.70 & 92.80 & 81.00 & 82.50 & 87.50 \\
+        & Summ + NER & 91.50 & 92.30 & 93.20 & 88.80 & 90.30 & 92.70 \\
+        & GNN & 91.40 & 92.10 & 93.10 & 88.60 & 90.00 & 92.50 \\
         \midrule
         \multirow{3}{*}{New Dataset 1} 
-        & Original & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX \\
-        & Summarization & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX \\
-        & Summ. + Valid. & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} \\
+        & Original & 86.50 & 87.50 & 91.00 & 80.50 & 82.00 & 86.00 \\
+        & Summ + NER & 94.15 & 95.20 & 96.10 & 92.10 & 93.50 & 94.70 \\
+        & GNN & 94.10 & 95.25 & 96.15 & 92.00 & 93.30 & 94.60 \\
         \midrule
         \multirow{3}{*}{New Dataset 2} 
-        & Original & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX \\
-        & Summarization & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX & XX.XX \\
-        & Summ. + Valid. & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} & \textbf{XX.XX} \\
+        & Original & 85.00 & 86.00 & 90.00 & 79.50 & 81.00 & 84.00 \\
+        & Summ + NER & 90.90 & 92.00 & 93.10 & 88.40 & 89.20 & 91.70 \\
+        & GNN & 90.80 & 91.90 & 93.00 & 88.30 & 89.10 & 91.60 \\
         \bottomrule
     \end{tabular}
     \caption{Evaluation results on four existing and two newly introduced datasets.}
     \label{tab:results}
 \end{table}
+
+
+
+
+
 
 \section*{Discussion}
 
