@@ -38,7 +38,7 @@
       {\Large\textbf{Language Models and Structured Data}}
       
       \vspace*{.5cm}
-      Mid-term Project Report
+       Project Report
 
       \vspace*{1cm}
       %{\hfill\href{http://teaching.simplicitytheory.science}{teaching.simplicitytheory.science}}
@@ -48,7 +48,7 @@
 \end{center}
 
 \noindent Acronym of the Team: Table Turners\\
-Name:	Dmitry Timkin, Ivanina Ivanova, Mark Daychman, Renata Mindiyarova
+Name:	Dmitry Timkin, Ivanina Ivanova, Mark Daychman, Renata Mindiiarova
 
 {\centering\rule{\linewidth}{.5pt}}
 
@@ -92,10 +92,41 @@ Overall, in this paper we aim to address the following key questions:
 \section*{Method/Overall Architecture}
 
 \begin{itemize}
-\item A screenshot of you running the preprocessing tool to generate new data. Ez extra page. [RENATA]
-\item What do you use to summarize? Is there a token restriction? What about the cases when the table is suppose to be large? [RENATA]
-\item What is our gnn? Why did we use it? How did we use it? Some details [RENATA]
+\item We utilized a neural network-based summarization model to condense lengthy reports into concise and informative summaries. The model used is a DistilBART-CNN-12-6, which effectively reduces the length of reports while retaining critical information. In addition to summarizing, we integrated Named Entity Recognition (NER) to identify key entities such as players and teams within the text. To further enhance the quality of the data, we leveraged the Wikipedia API to fill in missing context or background knowledge, ensuring that all necessary details about teams and players were accurately captured. 
+\item In addition to the first approach, we also experimented with an alternative method to further enhance the quality of the data and ensure it aligns with structured table generation. Specifically, we applied a multistep process to enhance the quality of the data and ensure that it aligns with structured table generation. First, we used sentence ranking to prioritize the most relevant sentences, ensuring that only the most important content was retained. We also applied contrastive filtering to remove redundant or near-duplicate sentences, reducing noise in the dataset. To further refine the data, we used a Graph Neural Network (GNN) for attribute selection, which helped identify and retain the most relevant attributes for table generation, improving the overall accuracy and relevance of the output. 
 \end{itemize}
+\subsection*{Example: Table Filtering for WikiTableText}
+
+\textbf{Input Table (Before Filtering)}  
+\begin{verbatim}
+"table":  
+  - "title": "1978 Federation Cup (Tennis)"  
+  - "subtitle": "Qualifying Round"  
+  - "date": "19 August"  
+  - "winning team": "Philippines"  
+  - "score": "3–0"  
+  - "losing team": "Thailand"
+\end{verbatim}
+
+\textbf{Text:}  
+"Philippines won Thailand with 3–0 during 1978 Federation Cup."
+
+\textbf{Filtered Data:}
+\begin{verbatim}
+[('subtitle', 'qualifying round'), 
+ ('winning team', 'Philippines'), 
+ ('score', '3–0'), 
+ ('losing team', 'Thailand')]
+\end{verbatim}
+
+\textbf{What Changed?}
+\begin{itemize}
+    \item The ``title'' and ``date'' were removed because they were not explicitly mentioned in the text.
+    \item The ``winning team'', ``score'', and ``losing team'' were kept because they were directly referenced in the text.
+    \item The ``subtitle'' was maintained for structural context, even though it was not directly mentioned in the text.
+\end{itemize}
+
+This process illustrates how sentence ranking, contrastive filtering, and GNN-based attribute selection help extract the most relevant information for structured table generation, ensuring a high level of accuracy and relevance in the resulting output.
 
 \section*{Experimentation}
 \textit{Note: We faced several challenges running the original code from the paper due to its reliance on outdated Python versions and deprecated modules. The installation required extensive manual version tuning, use of an older pip version, and the manual cloning of certain packages from GitHub repositories to resolve compatibility issues. }
@@ -115,8 +146,9 @@ The original paper uses the following 4 datasets that we have all also included 
 \end{itemize}
 On top of that, we also introduce two new datasets:
 \begin{itemize}
-\item{\textbf{Dataset 1}} [RENATA]
-\item{\textbf{Dataset 2}} [RENATA]
+\item{\textbf{Dataset 1}} The Finnhub reported financial data set provides clean and comprehensive data sourced directly from SEC filings between 2010 and 2020. This dataset includes a wide range of financial information, such as income statements, balance sheets, and cash flow statements for various companies. 
+We also trained a model on the Reported Financials dataset to extract relevant financial metrics such as revenue, profit, and assets from unstructured text and convert them into a structured tabular format. 
+\item{\textbf{Dataset 2}} The MIMIC-III dataset is a large, open-access collection of anonymized clinical data from over 61,000 critical care admissions at a Boston teaching hospital, covering the period from 2001 to 2012. It includes 47 features such as demographics, vital signs, and lab test results, specifically for sepsis patients who meet the sepsis-3 definition criteria.
 \end{itemize}
 
 \subsection*{Accuracy Metric}
